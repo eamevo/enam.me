@@ -26,8 +26,8 @@ body {
     padding-top: 60px; /* Spacer for fixed nav */
     font-family: 'retro1', sans-serif;
     line-height: 1.15;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 /* 3. NAVIGATION BAR (FIXED) */
