@@ -1,9 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy Cyberpunk Portfolio
 
 on:
   push:
     branches:
-      - main  # This runs every time you save a change to 'main'
+      - main
 
 permissions:
   contents: write
@@ -12,23 +12,18 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/checkout@v4
-        with:
-          node-version: '20'
-
-      - name: Install and Build
+      - name: Install and Build 🔧
         run: |
           npm install
           npm run build
         env:
-          CI: false # This prevents the build from failing on small warnings
+          CI: false
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # This is where your finished site lives
-          branch: gh-pages # This creates a special "website" branch
+          folder: build # React builds into a folder named 'build'
+          branch: gh-pages
